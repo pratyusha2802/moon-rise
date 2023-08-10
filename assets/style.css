@@ -17,42 +17,68 @@ span {
   z-index: 100;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   margin: 0;
   padding: 40px;
-  transition: padding 0.3s ease, background 0.3s ease;
+  /* transition: padding 0.3s ease, background 0.3s ease; */
 }
 
 .header.sticky {
-  position: fixed;
+  /* position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+  right: 0; */
   background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  transition: padding 0.3s ease, background 0.3s ease;
-  padding: 20px;
+  /* transition: padding 0.3s ease, background 0.3s ease; */
+  /* padding: 20px; */
   transition: background 0.3s ease;
 }
 
 .logo {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .logo img {
-  height: 2.5rem;
+  height: 10vh;
+  width: 20vw;
 }
 
 .logo h1 {
+  display: inline-block;
   margin: 10px;
 }
 
-.header button {
-  background-color: transparent;
+.navbar-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar-link p {
+  padding: 10px;
+}
+
+.navbar-link p:hover {
+  text-decoration: underline;
+  color: #42bbb1;
+}
+
+.navbar-btn button {
   border: none;
+  background-color: #42bbb1;
   color: #fff;
+  border-radius: 50px;;
+  height: 3rem;
+  width: 10rem;
+  cursor: pointer;
+}
+
+.navhome {
+  color: #42bbb1;
 }
 
 .home {
@@ -60,13 +86,14 @@ span {
 }
 
 .home-1 {
+  margin: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: 80vh;
 }
 
 .home-11 {
   margin: 0 20px;
-  
 }
 
 .home-11 h1 {
@@ -103,14 +130,45 @@ span {
   justify-content: center;
 }
 
+.home-1 img {
+  height: 90vh;
+}
+
+.home-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 70vh;
+}
+
+.lock {
+  position: relative;
+  left: 10%;
+}
+
+.barcode {
+  height: 50vh;
+}
+
+.home-22 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+
+.home-22 span {
+  font-size: 3vh;
+}
+
 .home-2 h1 {
-  font-size: 1.5rem;
+  font-size: 5vh;
   margin: 0;
 }
 
-.home-2 p {
+.home-22 p {
   color: #656871;
   margin: 10px 0;
+  font-size: 2.25vh;
 }
 
 .home-2 button {
@@ -136,10 +194,20 @@ span {
 }
 
 .home-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.home-3 {
   background-color: #191a1e;
-  margin: 20px;
+  margin: 50px;
   padding: 20px;
   border-radius: 30px;
+  height: 80vh;
+}
+
+.homes {
+  padding: 60px;
 }
 
 .home-3 h2 {
@@ -168,6 +236,29 @@ span {
 
 .home-3 p {
   color: #656871;
+  padding: 0 50px;
+  margin: 10px 0;
+}
+
+.home-3 img {
+  height: 50%;
+  width: 50%;
+}
+
+.home-33 {
+  display: flex;
+  align-items: center;
+}
+
+.home-33 h4 {
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.alert {
+  position: relative;
+  top: -40%;
+  left: 40%;
 }
 
 .techstack {
@@ -176,35 +267,43 @@ span {
   justify-content: center;
   align-items: center;
   background-color: #191a1e;
-  margin: 20px;
+  margin: 10px 5%;
   border-radius: 20px;
-  padding-top: 20px;
+  padding: 150px 50px;
+}
+
+.techstack-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .techstack h2 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 5vh;
+  padding-bottom: 50px;
 }
 
-.techstack h5 {
-  margin: 10px;
-  font-size: 1rem;
+.techstack span {
+  font-size: 3vh;
 }
 
-.techstack p {
-  color: #656871;
-  margin: 5px;
-  font-size: 1rem;
-  text-align: center;
-  line-height: 1.5rem;
-}
-
-.techstack-1 {
+.techstack-11 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 20px;
+  align-items: flex-start;
+  margin: 10px 50px;
+}
+
+.techstack-11 h5 {
+  margin: 30px 10px 10px 10px;
+  font-size: 2.5vh;
+}
+
+.techstack-11 p {
+  color: #656871;
+  margin: 5px;
+  font-size: 2vh;
+  line-height: 3vh;
 }
 
 .techstack i {
@@ -244,10 +343,6 @@ span {
   box-shadow: 10px -10px 10px #444;
 }
 
-.footer {
-  margin: 20px 40px;
-}
-
 .logo {
   display: flex;
 }
@@ -272,6 +367,17 @@ span {
 hr {
   width: 100%;
   border: 1px solid #656871;
+}
+
+.footer {
+  margin: 20px 50px;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  max-width: 100vw;
+}
+
+.footer p {
+  padding: 0 20px;
 }
 
 .footer a {
@@ -303,8 +409,14 @@ hr {
   width: 100%;
 }
 
+hr {
+  border: 0.1vh solid #65687199;
+}
+
 .cpr {
   margin: 20px 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .cpr p {
